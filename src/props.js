@@ -1,11 +1,16 @@
 import React from "react";
 
 //Import Components
+import List from './components/list'
 
 function Props() {
   return (
-    // Code Inside div
-    <div></div>
+    <>
+        <List name="content" />
+        <List name="content" />
+        <List name="content" />
+        <List name="content" />
+    </>
   );
 }
 
