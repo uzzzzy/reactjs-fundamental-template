@@ -1,14 +1,19 @@
-import React from "react";
+function EmbeddingExpression(){
+  const companyName = 'Dumbways.id'
 
-function EmbedExpression() {
-  //Create function here
+  function getMajor(){
+      return " Full Stack "
+  }
 
-  //Create a variable here
-
+  function getBatch(number){
+      return <>Batch {number}</>
+  }
   return (
-    // Code Inside div
-    <div></div>
-  );
+      <div>
+          <h1>Welcome to {companyName} Class</h1>
+          <p>{getMajor()} {getBatch(25)}</p>
+      </div>
+  )
 }
 
-export default EmbedExpression;
+export default EmbeddingExpression
