@@ -1,15 +1,46 @@
-import React from "react";
+import { useState} from 'react'
 
-//Create Component PrivatePage
+function GuestPage(){
 
-//Create Component GuestPage
-
-function ConditionRenderin() {
-  //init State
-  return (
-    // Code Inside div
-    <div>{/* conditional logic rendering */}</div>
-  );
+    return (
+        <div>
+            <h1 >Welcome to Dumbways</h1>
+            <p>Please Sign In</p>
+        </div>
+    )
 }
 
-export default ConditionRenderin;
+
+function UserPage(){
+    return (
+        <div>
+            <h1 >Welcome to Dumbways User</h1>
+            
+        </div>
+    )
+}
+
+function ConditionalRendering(){
+    const [login, setLogin] = useState(false);
+
+    if(login){
+        return (
+            <>
+                <UserPage />
+                
+                <button onClick={() => setLogin(false)}>Logout</button>
+            </>
+        )
+    } else {
+        return (
+            <>
+                <GuestPage />
+                
+                <button onClick={() => setLogin(true)}>Login</button>
+            </>
+        )
+    }
+}
+
+
+export default ConditionalRendering
